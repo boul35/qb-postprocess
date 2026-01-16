@@ -60,8 +60,8 @@ class TestClassifier:
     def test_classify_movie(self, classifier, sample_context):
         """Test full classification of a movie."""
         candidate = FileCandidate(
-            source_path=Path("/downloads/The.Matrix.1999.mkv"),
-            relative_path=Path("The.Matrix.1999.mkv"),
+            source_path=Path("/downloads/The.Matrix.1999.1080p.BluRay.x264.mkv"),
+            relative_path=Path("The.Matrix.1999.1080p.BluRay.x264.mkv"),
             size=1000000,
             extension=".mkv",
             is_video=True,
@@ -70,7 +70,7 @@ class TestClassifier:
         context = TorrentContext(
             torrent_name="The.Matrix.1999.1080p.BluRay.x264",
             save_path=Path("/downloads"),
-            content_path=Path("/downloads/The.Matrix.1999.mkv"),
+            content_path=Path("/downloads/The.Matrix.1999.1080p.BluRay.x264.mkv"),
             category="movies",
             tags=[],
         )

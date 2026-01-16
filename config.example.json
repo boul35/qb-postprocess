@@ -1,22 +1,22 @@
 {
-  "movie_path": "/path/to/movies",
-  "tv_path": "/path/to/tv",
-  "link_mode": "hardlink",
-  "radarr": {
-    "url": "http://localhost:7878",
-    "key": "your_radarr_api_key"
-  },
-  "sonarr": {
-    "url": "http://localhost:8989",
-    "key": "your_sonarr_api_key"
-  },
-  "plex": {
-    "url": "http://localhost:32400",
-    "token": "your_plex_token",
-    "section_id": "1"
-  },
-  "path_mapping": {
-    "local": "/local/media",
-    "remote": "/remote/media"
-  }
+	"movie_path": "/path/to/movies",
+	"tv_path": "/path/to/tv",
+	"link_mode": "hardlink",
+	"radarr": {
+		"url": "http://localhost:7878",
+		"key": "your_radarr_api_key"
+	},
+	"sonarr": {
+		"url": "http://localhost:8989",
+		"key": "your_sonarr_api_key"
+	},
+	"plex": {
+		"url": "http://localhost:32400",
+		"token": "your_plex_token",
+		"section_id": "1"
+	},
+	"path_mapping": {
+		"local": "/local/media",
+		"remote": "/remote/media"
+	}
 }

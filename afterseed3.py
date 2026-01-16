@@ -56,9 +56,11 @@ class TorrentContext:
             torrent_name=os.environ.get("TORRENT_NAME", ""),
             save_path=Path(os.environ.get("TORRENT_SAVE_PATH", ".")),
             category=os.environ.get("TORRENT_CATEGORY"),
-            tags=os.environ.get("TORRENT_TAGS", "").split(",")
-            if os.environ.get("TORRENT_TAGS")
-            else [],
+            tags=(
+                os.environ.get("TORRENT_TAGS", "").split(",")
+                if os.environ.get("TORRENT_TAGS")
+                else []
+            ),
             content_path=Path(os.environ.get("TORRENT_CONTENT_PATH", ".")),
         )
 
@@ -842,7 +844,6 @@ def run_tests() -> int:
                 content_path=src_path,
                 category=test["category"],
                 tags=[],
-                info_hash="TEST",
             )
 
             cl = classifier.classify(cand, ctx)

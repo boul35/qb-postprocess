@@ -20,3 +20,12 @@ repos:
     hooks:
       - id: isort
         args: ["--profile", "black"]
+
+  - repo: local
+    hooks:
+      - id: pytest
+        name: pytest
+        entry: python -m pytest tests/ -x
+        language: system
+        pass_filenames: false
+        always_run: true
